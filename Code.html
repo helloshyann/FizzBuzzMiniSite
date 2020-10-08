@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Fizz ϟ Buzz | Shyann Jobe</title>
+    <meta name="description" content="Shyann Jobe">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/onestarpurple.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link href="Content/Custom.css" rel="stylesheet" />
+    <link href="Content/prism.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark banner-color static-top">
+        <div class="container">
+            <!-- logo image -->
+            <div class="site-logo">
+                <a href="index.html">
+                    <img src="Images/signature2.png" width="150" alt="Shyann Jobe" />
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Index.html">
+                            ✨ Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Solve.html">✨ Solution</a>
+                    </li>
+                    <li class="nav-item  active">
+                        <a class="nav-link" href="/Code.html">✨ Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//github.com/helloshyann" target="_blank">✨ Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//shyann.netlify.app" target="_blank">✨ Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">Fizz ϟ Buzz</h1>
+                <p class="lead"></p>
+
+                <pre>
+<code class="language-js line-numbers">//FizzBuzz Code
+function fizzBuzz() {
+    let firstNum = document.getElementById('fizzNum').value;
+    let secondNum = document.getElementById('buzzNum').value;
+    let returnValue = [];
+    for (let i = 1; i <= 100; i++) {
+        if (i % firstNum == 0 && i % secondNum == 0) {
+            returnValue.push("<span class='fizzbuzz ffont'> Fizz</span><span class='fizzbuzz bfont'> Buzz</span>");
+            }
+        else if (i % firstNum == 0) {
+            returnValue.push("<span class='fbstyle'> Fizz</span>");
+            }
+        else if (i % secondNum == 0) {
+            returnValue.push("<span class='istyle'> Buzz</span>");
+            }
+        else {
+            returnValue.push(" " + i);
+            }
+        }
+    return returnValue;
+}
+
+//Call FizzBuzz
+function fizzle() {
+    let result = "";
+    let value1 = document.getElementById('fizzNum').value;
+    let value2 = document.getElementById('buzzNum').value;
+    result = fizzBuzz(value1, value2);
+    document.getElementById('result').innerHTML = `${result}`;
+}
+</code>
+                </pre>
+
+                <pre>
+<code class="language-html line-numbers">&lt;div class="container">
+
+    &lt;!--Page Title-->
+    &lt;div class="row">
+        &lt;div class="col text-center">
+            &lt;h1 class="mt-5">Fizz ϟ Buzz&lt;/h1>
+        &lt;/div>
+    &lt;/div>
+
+    &lt;hr />
+
+    &lt;!--Input Row-->
+    &lt;div class="row">
+        &lt;div class="col text-center">
+            &lt;input type="number" id="fizzNum" value="3" size="10" placeholder="Fizz Number">
+        &lt;/div>
+        &lt;div class="col text-center">
+            &lt;input type="number" id="buzzNum" value="5" size="10" placeholder="Buzz Number">
+        &lt;/div>
+    &lt;/div>
+
+    &lt;hr />
+
+    &lt;!--Submit Button-->
+    &lt;div class="row">
+        &lt;div class="col text-center">
+            &lt;button class="btn btn-default" data-toggle="modal" data-target="#myModal" onclick="fizzle()">
+            CALCULATE
+            &lt;/button>
+        &lt;/div>
+    &lt;/div>
+
+    &lt;!--Results Modal Pop Up-->
+    &lt;div id="myModal" class="modal fade" role="dialog">
+        &lt;div class="modal-dialog">
+            &lt;div class="modal-content">
+                &lt;div class="modal-header">
+                    &lt;button type="button" class="close" data-dismiss="modal">&times;&lt;/button>
+                &lt;/div>
+                &lt;div class="modal-body text-center">
+                    &lt;h1>Results&lt;/h1>&lt;br />
+                    &lt;span id="result">&lt;/span>
+                &lt;/div>
+                &lt;div class="modal-footer text-center">
+                    &lt;button type="button" class="btn btn-default" data-dismiss="modal">Close&lt;/button>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+</code>
+    </pre>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript PrismJS -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="Scripts/prism.js"></script>
+</body>
+
+</html>
