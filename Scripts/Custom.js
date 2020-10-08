@@ -11,10 +11,10 @@ function fizzBuzz() {
             returnValue.push("<span class='fizzbuzz ffont'> Fizz</span><span class='fizzbuzz bfont'> Buzz</span>");
         }
         else if (i % firstNum == 0) {
-            returnValue.push("<span class='fbstyle'> Fizz</span>");
+            returnValue.push("<span class='fbstyle'> fizz</span>");
         }
         else if (i % secondNum == 0) {
-            returnValue.push("<span class='istyle'> Buzz</span>");
+            returnValue.push("<span class='fbstyle'> buzz</span>");
         }
         else {
             returnValue.push(" " + i);
