@@ -8,7 +8,7 @@ function fizzBuzz() {
     let returnValue = [];
     for (let i = 1; i <= 100; i++) {
         if (i % firstNum == 0 && i % secondNum == 0) {
-            returnValue.push("<span class='fizzbuzz ffont'> Fizz</span><span class='fizzbuzz bfont'> Buzz</span>");
+            returnValue.push("<span class='fizzfizz'> Fizz</span><span class='buzzbuzz'> Buzz</span>");
         }
         else if (i % firstNum == 0) {
             returnValue.push("<span class='fbstyle'> fizz</span>");
