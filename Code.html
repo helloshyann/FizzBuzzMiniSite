@@ -66,23 +66,23 @@
 function fizzBuzz() {
     let firstNum = document.getElementById('fizzNum').value;
     let secondNum = document.getElementById('buzzNum').value;
-    let returnValue = [];
+    let finalResult = [];
     for (let i = 1; i <= 100; i++) {
         if (i % firstNum == 0 && i % secondNum == 0) {
-            returnValue.push("<span class='fizzfizz'> FIZZ</span><span class='buzzbuzz'> BUZZ</span>");
+            finalResult.push("<span class='fizzfizz'> FIZZ</span><span class='buzzbuzz'> BUZZ</span>");
             confetti.start(1000);
             }
         else if (i % firstNum == 0) {
-            returnValue.push("<span class='fbstyle'> fizz</span>");
+            finalResult.push("<span class='fbstyle'> fizz</span>");
             }
         else if (i % secondNum == 0) {
-            returnValue.push("<span class='fbstyle'> buzz</span>");
+            finalResult.push("<span class='fbstyle'> buzz</span>");
             }
         else {
-            returnValue.push(" " + i);
+            finalResult.push(" " + i);
             }
         }
-    return returnValue;
+    return finalResult;
 }
 
 //Call FizzBuzz
