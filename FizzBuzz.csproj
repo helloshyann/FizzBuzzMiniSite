@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Code.html" />
+    <Content Include="Content\all.min.css" />
+    <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -76,6 +78,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Custom.css" />
     <Content Include="Content\prism.css" />
+    <Content Include="Content\simple-line-icons.css" />
+    <Content Include="Content\slick.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Images\bootstrapicon.png" />
     <Content Include="Images\css3icon.png" />
     <Content Include="Images\html5purple.png" />
@@ -88,8 +93,22 @@
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\confetti.js" />
     <Content Include="Scripts\Custom.js" />
+    <Content Include="Scripts\imagesloaded.pkgd.min.js" />
+    <Content Include="Scripts\isotope.pkgd.min.js" />
+    <Content Include="Scripts\jquery-1.12.3.min.js" />
+    <Content Include="Scripts\jquery.counterup.min.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\jquery.waypoints.min.js" />
+    <Content Include="Scripts\morphext.min.js" />
+    <Content Include="Scripts\parallax.min.js" />
+    <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\prism.js" />
+    <Content Include="Scripts\slick.min.js" />
+    <Content Include="Scripts\validator.js" />
+    <Content Include="Scripts\wow.min.js" />
     <Content Include="Solve.html" />
     <Content Include="Web.config" />
   </ItemGroup>

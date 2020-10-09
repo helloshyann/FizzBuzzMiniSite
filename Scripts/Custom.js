@@ -1,7 +1,4 @@
-﻿
-
-
-////FizzBuzz Code
+﻿////FizzBuzz Code
 function fizzBuzz() {
     let firstNum = document.getElementById('fizzNum').value;
     let secondNum = document.getElementById('buzzNum').value;
@@ -9,6 +6,7 @@ function fizzBuzz() {
     for (let i = 1; i <= 100; i++) {
         if (i % firstNum == 0 && i % secondNum == 0) {
             returnValue.push("<span class='fizzfizz'> Fizz</span><span class='buzzbuzz'> Buzz</span>");
+            confetti.start(1000);
         }
         else if (i % firstNum == 0) {
             returnValue.push("<span class='fbstyle'> fizz</span>");
