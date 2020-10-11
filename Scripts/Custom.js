@@ -29,6 +29,16 @@ function fizzle() {
     let result = "";
     let value1 = document.getElementById('fizzNum').value;
     let value2 = document.getElementById('buzzNum').value;
-    result = fizzBuzz(value1, value2);
-    document.getElementById('result').innerHTML = `${result}`;
+
+    if (value1 == "" || value2 == "") {
+        document.getElementById('result').innerHTML = 'You must enter two numbers to play Fizz Buzz.';
+    }
+    else {
+
+        result = fizzBuzz(value1, value2);
+        document.getElementById('result').innerHTML = `${result}`;
+    }
 }
+
+
+
