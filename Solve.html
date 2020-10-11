@@ -13,6 +13,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!--Custom CSS-->
     <link href="Content/Custom.css" rel="stylesheet" />
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #6C6FE5;
+            padding: 10px;
+        }
+
+        th {
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+    </style>
     <!--Custom JS-->
     <script src="/Scripts/Custom.js"></script>
 </head>
@@ -99,6 +115,8 @@
             </div>
         </div>
 
+
+
         <!--Results Modal Pop Up-->
         <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
@@ -107,8 +125,26 @@
                         <button type="button" class="close" data-dismiss="modal">×</button>
                     </div>
                     <div class="modal-body text-center">
-                        <h1>Results</h1><br />
-                        <span id="result"></span>
+
+                        <div class="rev-style" style="padding-top: .25rem">
+                            <table id="results" class="responsive" style="overflow-x: auto;">
+                                <!--Generated Results go here-->
+                            </table>
+                        </div>
+                        <script id="template-header" type="text/template">
+                            <thead style="background-color: #6C6FE5">
+                                <tr><th colspan="5">Results</th></tr>
+                            </thead>
+                        </script>
+                        <script id="template-row-items" type="text/template">
+                            <tr style="color: #000000; border: solid; border-color: #6C6FE5">
+                                <td>{{val1}}</td>
+                                <td>{{val2}}</td>
+                                <td>{{val3}}</td>
+                                <td>{{val4}}</td>
+                                <td>{{val5}}</td>
+                            </tr>
+                        </script>
                     </div>
                     <div class="modal-footer text-center">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -118,11 +154,13 @@
         </div>
     </div>
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="Scripts/confetti.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="Scripts/confetti.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 
 
 </body>
