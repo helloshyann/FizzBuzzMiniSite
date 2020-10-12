@@ -1,4 +1,4 @@
-![FizzBuzz](/Images/fizzbuzzwriting.png =250x)
+![FizzBuzz](/Images/fizzbuzzwriting.png=250x)
 
 # The Division Game
 
