@@ -83,6 +83,7 @@
     <Content Include="Content\style.css" />
     <Content Include="Images\bootstrapicon.png" />
     <Content Include="Images\css3icon.png" />
+    <Content Include="Images\fizzbuzzwriting.png" />
     <Content Include="Images\html5purple.png" />
     <Content Include="Images\jquerypurple.png" />
     <Content Include="Images\jspurple.png" />
