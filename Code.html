@@ -69,37 +69,51 @@ function fizzBuzz() {
     let finalResult = [];
     for (let i = 1; i <= 100; i++) {
         if (i % firstNum == 0 && i % secondNum == 0) {
-            finalResult.push("<span class='fizzfizz'> FIZZ</span><span class='buzzbuzz'> BUZZ</span>");
+            finalResult.push("<span class='fizzfizz'> Fizz</span><span class='buzzbuzz'> Buzz</span>");
             confetti.start(1000);
-            }
+        }
         else if (i % firstNum == 0) {
             finalResult.push("<span class='fbstyle'> fizz</span>");
-            }
+        }
         else if (i % secondNum == 0) {
             finalResult.push("<span class='fbstyle'> buzz</span>");
-            }
+        }
         else {
             finalResult.push(" " + i);
-            }
         }
+    }
     return finalResult;
 }
-
-//Call FizzBuzz
+//FizzBuzz Button Function
 function fizzle() {
-    let result = "";
-    let value1 = document.getElementById('fizzNum').value;
-    let value2 = document.getElementById('buzzNum').value;
+    
+    let output = [];
+    let headTemplate = document.getElementById('template-header');
+    let rowTemplate = document.getElementById('template-row-items');
 
-    if (value1 == "" || value2 == "") {
-        document.getElementById('result').innerHTML = 'You must enter two numbers to play Fizz Buzz.';
+    let templateHTML = rowTemplate.innerHTML;
+    let resultsHTML = headTemplate.innerHTML;
+    
+    let val1 = document.getElementById('fizzNum').value;
+    let val2 = document.getElementById('buzzNum').value;
+
+    output = fizzBuzz(val1, val2);
+
+    if (val1 == "" || val2 == "") {
+        document.getElementById('results').innerHTML = 'You must enter two numbers to play Fizz Buzz';        
     }
     else {
-
-        result = fizzBuzz(value1, value2);
-        document.getElementById('result').innerHTML = `${result}`;
+        for (i = 0; i < output.length; i += 5) {
+            resultsHTML += templateHTML.replace('{{val1}}', output[i])
+                .replace('{{val2}}', output[i + 1])
+                .replace('{{val3}}', output[i + 2])
+                .replace('{{val4}}', output[i + 3])
+                .replace('{{val5}}', output[i + 4]);
+        }
+        document.getElementById('results').innerHTML = resultsHTML;       
     }
 }
+
 </code>
                 </pre>
 
@@ -138,21 +152,39 @@ function fizzle() {
 
     &lt;!--Results Modal Pop Up-->
     &lt;div id="myModal" class="modal fade" role="dialog">
-        &lt;div class="modal-dialog">
-            &lt;div class="modal-content">
-                &lt;div class="modal-header">
-                    &lt;button type="button" class="close" data-dismiss="modal">&times;&lt;/button>
-                &lt;/div>
-                &lt;div class="modal-body text-center">
-                    &lt;h1>Results&lt;/h1>&lt;br />
-                    &lt;span id="result">&lt;/span>
-                &lt;/div>
-                &lt;div class="modal-footer text-center">
-                    &lt;button type="button" class="btn btn-default" data-dismiss="modal">Close&lt;/button>
+            &lt;div class="modal-dialog">
+                &lt;div class="modal-content">
+                    &lt;div class="modal-header">
+                        &lt;button type="button" class="close" data-dismiss="modal">×&lt;/button>
+                    &lt;/div>
+                    &lt;div class="modal-body text-center">
+
+                        &lt;div class="rev-style" style="padding-top: .25rem">
+                            &lt;table id="results" class="responsive" style="overflow-x: auto;">
+                                &lt;!--Results-->
+                            &lt;/table>
+                        &lt;/div>
+                        &lt;script id="template-header" type="text/template">
+                            &lt;thead style="background-color: #6C6FE5">
+                                &lt;tr>&lt;th colspan="5">Results&lt;/th>&lt;/tr>
+                            &lt;/thead>
+                        &lt;/script>
+                        &lt;script id="template-row-items" type="text/template">
+                            &lt;tr style="color: #000000; border: solid; border-color: #6C6FE5">
+                                &lt;td>{{val1}}&lt;/td>
+                                &lt;td>{{val2}}&lt;/td>
+                                &lt;td>{{val3}}&lt;/td>
+                                &lt;td>{{val4}}&lt;/td>
+                                &lt;td>{{val5}}&lt;/td>
+                            &lt;/tr>
+                        &lt;/script>
+                    &lt;/div>
+                    &lt;div class="modal-footer text-center">
+                        &lt;button type="button" class="btn btn-default" data-dismiss="modal">Close&lt;/button>
+                    &lt;/div>
                 &lt;/div>
             &lt;/div>
         &lt;/div>
-    &lt;/div>
 &lt;/div>
 </code>
     </pre>
