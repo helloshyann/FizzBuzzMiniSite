@@ -1,8 +1,8 @@
-# Fizz Buzz Division Game
+![FizzBuzz](/Images/fizzbuzzwriting.png)
 
-The Fizzbuzz coding challenge was invented in 2007 by Imran Ghoryin in order to assess developer competence. Since its conception the Fizzbuzz challenge has been used by Facebook and Microsoft as interview tools and has also been taught at Stanford, Berkley, Caltech and countless other universities.
+The Fizzbuzz is a division game and coding challenge was invented in 2007 by Imran Ghoryin in order to assess developer competence. Since its conception the Fizzbuzz challenge has been used by Facebook and Microsoft as interview tools and has also been taught at Stanford, Berkley, Caltech and countless other universities.
 
-## Installation
+## How It Works
 
 This program has been modified to allow a user to enter two integers (instead of hard coding 3 and 5) and print the appropriate result based on multiples of their input.
 
