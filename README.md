@@ -1,4 +1,3 @@
-![FizzBuzz](/Images/fizzbuzzwriting.png)
 <img src="/Images/fizzbuzzwriting.png" width="200">
 
 # The Division Game
